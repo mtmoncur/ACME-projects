@@ -53,6 +53,8 @@ This repository must be manually synchronized with the online repository via two
 | git reset -- <filename>     | Remove a file from the staging area.           |
 | git diff <filename>         | See the changes made on an unstaged file since the last commit.|
 | git diff --cached <filename> | See the changes made on a staged file since the last commit.|
+| git config --local user.name "your name" | Tell git who you are |
+| git config --local user.email youremail@gmail.com | Tell git who you are |
 
 #### Example Work Session ####
 
