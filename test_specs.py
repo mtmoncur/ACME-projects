@@ -126,22 +126,26 @@ def test_complex_str(set_up_complex_nums):
 
 # Problem 4: Write test cases for the Set game.
 def test_check_input():
-    game1 = ['0021', '0020', '1200', '2121', '1211', '2102', '2110', '1221', '0000', '1202', '2210', '0221']
-    game2 = ['21', '0020', '1200', '2121', '1211', '2102', '2110', '1221', '0000', '1202', '2210', '0221']
-    game3 = ['0020', '1200', '2121', '1211', '2102', '2110', '1221', '0000', '1202', '2210', '0221']
-    game4 = ['2140', '00#0', '1200', '2121', '1211', '2102', '2110', '1221', '0000', '1202', '2210', '0221']
+    f1 = 'hands/set1.txt'
+    f2 = 'hands/set2.txt'
+    f3 = 'hands/set3.txt'
+    f4 = 'hands/set4.txt'
+    game1 = specs.get_file_contents(f1)
+    game2 = specs.get_file_contents(f2)
+    game3 = specs.get_file_contents(f3)
+    game4 = specs.get_file_contents(f4)
 
     assert specs.check_input(game1) is None
 
     with pytest.raises(Exception) as excinfo:
         specs.check_input(game2)
     assert excinfo.typename == 'ValueError'
-    assert excinfo.value.args[0] == 'Card has incorrect number of properties.'
+    assert excinfo.value.args[0] == 'Incorrect number of cards in file.'
     
     with pytest.raises(Exception) as excinfo:
         specs.check_input(game3)
     assert excinfo.typename == 'ValueError'
-    assert excinfo.value.args[0] == 'Incorrect number of cards in file.'
+    assert excinfo.value.args[0] == 'Card has incorrect number of properties.'
 
     with pytest.raises(Exception) as excinfo:
         specs.check_input(game4)
@@ -163,9 +167,10 @@ def test_is_match():
 def test_get_file_contents():
     f1 = 23
     f2 = 'not_a_real_file.txt'
-    f3 = 'set1.txt'
+    f3 = 'hands/set1.txt'
+    
     game1 = ['0021', '0020', '1200', '2121', '1211', '2102', '2110', '1221', '0000', '1202', '2210', '0221']
-
+ 
     with pytest.raises(Exception) as excinfo:
         specs.get_file_contents(f1)
     assert excinfo.typename == 'TypeError'
@@ -179,4 +184,7 @@ def test_get_file_contents():
     assert specs.get_file_contents(f3) == game1
 
 def test_set_finder():
-    assert specs.set_finder('set1.txt') == 6
+    f1 = 'hands/set1.txt'
+
+    assert specs.set_finder(f1) == 6
+
