@@ -42,7 +42,7 @@ def calculate_errors(f,df,pts,h = 1e-5):
 # Problem 3
 def prob3():
     """Use the centered difference quotient to approximate the derivative of
-    f(x)=(sin(x)+1)^x at x= π/3, π/4, and π/6.
+    f(x)=(sin(x)+1)^x at x= pi/3, pi/4, and pi/6.
     Then compute the error of each approximation
 
     Returns:
