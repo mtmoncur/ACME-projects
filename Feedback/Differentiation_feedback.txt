@@ -1,0 +1,7 @@
+01/17/17 22:31
+
+Error loading numerical_differentiation.py:
+	Non-ASCII character '\xcf' in file /Users/mike/Documents/ta/TylerMoncur/numerical_differentiation.py on line 46, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details (numerical_differentiation.py, line 45)
+
+--------------------------------------------------------------------------------
+
