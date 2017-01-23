@@ -72,7 +72,7 @@ def prob4():
     dfy = (y(alpha[2],beta[2]) - y(alpha[0], beta[0]))/(2*h)
     dfx = (x(alpha[2],beta[2]) - x(alpha[0], beta[0]))/(2*h)
 
-    return (dfy**2 + dfx**2)**0.5
+    return (dfy**2 + dfx**2)**0.5*3600/1000
 
 # Problem 5
 def jacobian(f, n, m, pt, h=1e-5):
