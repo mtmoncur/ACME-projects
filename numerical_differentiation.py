@@ -66,13 +66,14 @@ def prob4():
     beta = np.pi/180*np.array([65.59, 64.59, 63.62])
     a = 500. #meters
 
-    y = lambda al, be: a*np.tan(be)/(np.tan(be) - np.tan(al))
-    x = lambda al, be: a*np.tan(al)*np.tan(be)/(np.tan(be) - np.tan(al))
+    x = lambda al, be: a*np.tan(be)/(np.tan(be) - np.tan(al))
+    y = lambda al, be: a*np.tan(al)*np.tan(be)/(np.tan(be) - np.tan(al))
+    
     h = 1.0 #seconds
     dfy = (y(alpha[2],beta[2]) - y(alpha[0], beta[0]))/(2*h)
     dfx = (x(alpha[2],beta[2]) - x(alpha[0], beta[0]))/(2*h)
-
-    return (dfy**2 + dfx**2)**0.5*3600/1000
+    
+    return (dfy**2 + dfx**2)**0.5
 
 # Problem 5
 def jacobian(f, n, m, pt, h=1e-5):
