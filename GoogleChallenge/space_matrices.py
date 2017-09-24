@@ -1,5 +1,5 @@
 
-/*
+'''
 Disorderly Escape
 =================
 Oh no! You've managed to free the bunny prisoners and escape Commander Lambdas exploding space station, but her team of 
@@ -69,7 +69,7 @@ Inputs:
 Output:
     (string) "430"
 Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
-*/
+'''
 
 import fractions as fr
 import math
